@@ -45,4 +45,14 @@ class AdminDashboardTest extends TestCase
         $response->assertStatus(200);
         $response->assertViewIs('dashboard.reservation.list');
     }
+
+    public function test_admin_access_reservation_create()
+    {
+        $user = User::factory()->admin()->create();
+
+        $response = $this->actingAs($user)->get('/dashboard/reservations/create');
+
+        $response->assertStatus(200);
+        $response->assertViewIs('dashboard.reservation.create');
+    }
 }

@@ -15,8 +15,13 @@ Route::middleware('auth')->group(function () {
         Route::get('/', function () {
             return view('dashboard.home');
         });
-        Route::get('/reservations', function () {
-            return view('dashboard.reservation.list');
+        Route::prefix('reservations')->group(function () {
+            Route::get('/', function () {
+                return view('dashboard.reservation.list');
+            });
+            Route::get('/create', function () {
+                return view('dashboard.reservation.create');
+            });
         });
     });
 });
