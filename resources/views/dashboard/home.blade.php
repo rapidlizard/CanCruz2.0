@@ -8,10 +8,10 @@
     <a class="category" href="/dashboard/reservations">
         <span>Reservations</span>
     </a>
-    <a class="category" href="/dashboard/Rooms">
+    <a class="category" href="/dashboard/rooms">
         <span>Rooms</span>
     </a>
-    <a class="category" href="/dashboard/Services">
+    <a class="category" href="/dashboard/services">
         <span>Services</span>
     </a>
 </section>

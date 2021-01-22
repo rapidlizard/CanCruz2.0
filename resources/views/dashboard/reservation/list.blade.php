@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<header class="dashboard-header">
+<header class="dashboard-header d-flex justify-content-between align-items-center">
     <h1>Reservations</h1>
+    <a class="btn btn-primary" href="/dashboard/reservations/create">Create</a>
 </header>
 <main>
     <table>
@@ -21,8 +22,6 @@
             @endforeach
         </tbody>
     </table>
-</main>
-<footer>
     <a id="back" href>< back</a>
-</footer>
+</main>
 @endsection

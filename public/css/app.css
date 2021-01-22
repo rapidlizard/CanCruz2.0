@@ -10962,4 +10962,16 @@ table tbody td {
   padding: 5px 10px;
 }
 
+form {
+  max-width: 500px;
+}
+
+form div:nth-last-child(2) {
+  margin-bottom: 50px;
+}
+
+form label {
+  font-size: 18px;
+}
+
 
