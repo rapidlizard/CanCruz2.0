@@ -1,0 +1,26 @@
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    .category {
+        height: 175px;
+        width: 300px;
+        position: relative;
+
+        margin: 0px 15px 15px 0;
+        padding: 10px;
+
+        border-radius: 10px;
+        background-color: lightgrey;
+
+        span {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+
+            font-size: 26px;
+            color: black;
+        }
+    }
+}

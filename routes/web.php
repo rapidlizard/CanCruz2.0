@@ -16,13 +16,9 @@ Route::prefix('reservations')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::prefix('dashboard')->group(function () {
-        Route::get('/', function () {
-            return view('dashboard.home');
-        });
+        Route::get('/', [App\Http\Controllers\DashboardController::class, 'home']);
         Route::prefix('reservations')->group(function () {
-            Route::get('/', function () {
-                return view('dashboard.reservation.list');
-            });
+            Route::get('/', [App\Http\Controllers\DashboardController::class, 'reservations']);
             Route::get('/create', function () {
                 return view('dashboard.reservation.create');
             });

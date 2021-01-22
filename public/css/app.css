@@ -10903,4 +10903,63 @@ a.text-dark:focus {
   }
 }
 
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.categories .category {
+  height: 175px;
+  width: 300px;
+  position: relative;
+  margin: 0px 15px 15px 0;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: lightgrey;
+}
+
+.categories .category span {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 26px;
+  color: black;
+}
+
+.dashboard-header {
+  margin-bottom: 50px;
+}
+
+#back {
+  font-size: 18px;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 50px;
+  overflow: hidden;
+  border-collapse: collapse;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-size: large;
+}
+
+table thead {
+  background-color: lightgrey;
+  font-size: 24px;
+}
+
+table thead th {
+  padding: 5px 10px;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #e6e6e6;
+}
+
+table tbody td {
+  padding: 5px 10px;
+}
+
 

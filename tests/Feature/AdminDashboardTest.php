@@ -29,7 +29,7 @@ class AdminDashboardTest extends TestCase
         $response->assertRedirect('/dashboard');
     }
 
-    public function test_no_login_redirects_to_login()
+    public function test_no_login_redirects_to_login_page()
     {
         $response = $this->get('/dashboard');
 

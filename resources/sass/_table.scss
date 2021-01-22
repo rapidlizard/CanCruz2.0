@@ -1,0 +1,35 @@
+table {
+    width: 100%;
+
+    margin-bottom: 50px;
+
+    overflow: hidden;
+
+    border-collapse: collapse;
+    border-radius: 5px;
+    border: 1px solid grey;
+
+    font-size: large;
+
+    thead {
+        background-color: lightgrey;
+
+        font-size: 24px;
+
+        th {
+            padding: 5px 10px;
+        }
+    }
+
+    tbody {
+        tr {
+            &:nth-child(even) {
+                background-color: rgb(230, 230, 230);
+            }
+        }
+
+        td {
+            padding: 5px 10px;
+        }
+    }
+}
