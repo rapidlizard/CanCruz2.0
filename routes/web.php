@@ -10,6 +10,10 @@ Auth::routes([
     'register' => false
 ]);
 
+Route::prefix('reservations')->group(function () {
+    Route::post('/create', [App\Http\Controllers\ReservationController::class, 'store']);
+});
+
 Route::middleware('auth')->group(function () {
     Route::prefix('dashboard')->group(function () {
         Route::get('/', function () {
