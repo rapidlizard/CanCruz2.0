@@ -23,4 +23,11 @@ class ReservationController extends Controller
 
         return redirect('/dashboard/reservations');
     }
+
+    public function update(Reservation $reservation, Request $request)
+    {
+        $reservation->update($request->all());
+
+        return redirect('dashboard/reservations');
+    }
 }

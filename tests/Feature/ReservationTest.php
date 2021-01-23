@@ -38,4 +38,19 @@ class ReservationTest extends TestCase
             'id' => $reservation->id
         ]);
     }
+
+    public function test_update_reservation()
+    {
+        $reservation = Reservation::factory()->create();
+        $updatedReservation = [
+            'name' => 'Francisco'
+        ];
+
+        $response = $this->patch('/reservations/'.$reservation->id, $updatedReservation);
+
+        $response->assertRedirect();
+        $this->assertDatabaseHas('reservations', [
+            'name' => 'Francisco'
+        ]);
+    }
 }
