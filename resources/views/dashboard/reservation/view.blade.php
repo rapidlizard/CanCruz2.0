@@ -14,6 +14,21 @@
         </div>
 
         <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-control" type="email" name="email" autocomplete="off" value="{{ $reservation->email }}" disabled>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Phone</label>
+            <input class="form-control" type="text" name="phone" autocomplete="off" value="{{ $reservation->phone }}" disabled>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Number of people</label>
+            <input class="form-control" type="text" name="persons" autocomplete="off" value="{{ $reservation->persons }}" disabled>
+        </div>
+
+        <div class="form-group">
             <label class="form-label">Price</label>
             <input class="form-control" id="disabledInput" type="text" name="total_price" autocomplete="off" value="{{ $reservation->total_price }}" disabled>
         </div>

@@ -13,6 +13,9 @@ class ReservationFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
+            'email' => $this->faker->safeEmail,
+            'phone' => $this->faker->phoneNumber,
+            'persons' => rand(1, 4),
             'total_price' => rand(1, 50)
         ];
     }

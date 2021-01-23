@@ -11,6 +11,9 @@ class Reservation extends Model
 
     protected $fillable = [
         'name',
+        'email',
+        'phone',
+        'persons',
         'total_price'
     ];
 }

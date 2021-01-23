@@ -14,11 +14,20 @@ class ReservationTest extends TestCase
     {
         $reservation = Reservation::factory()->make();
 
-        $response = $this->post('/reservations/create', ['name' => $reservation->name, 'total_price' => $reservation->total_price]);
+        $response = $this->post('/reservations/create', [
+            'name' => $reservation->name,
+            'email' => $reservation->email,
+            'phone' => $reservation->phone,
+            'persons' => $reservation->persons,
+            'total_price' => $reservation->total_price
+        ]);
 
         $response->assertStatus(302);
         $this->assertDatabaseHas('reservations', [
             'name' => $reservation->name,
+            'email' => $reservation->email,
+            'phone' => $reservation->phone,
+            'persons' => $reservation->persons,
             'total_price' => $reservation->total_price
         ]);
     }

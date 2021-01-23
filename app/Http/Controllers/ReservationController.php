@@ -9,10 +9,7 @@ class ReservationController extends Controller
 {
     public function store(Request $request)
     {
-        $reservation = Reservation::create([
-            'name' => $request->name,
-            'total_price' => $request->total_price
-        ]);
+        $reservation = Reservation::create($request->all());
 
         return redirect('/dashboard/reservations');
     }

@@ -9,7 +9,8 @@
     <table>
         <thead>
             <tr>
-                <th>Name</th>
+                <th>Email</th>
+                <th>No. of people</th>
                 <th>Price</th>
                 <th></th>
             </tr>
@@ -17,7 +18,8 @@
         <tbody>
             @foreach($reservations as $reservation)
             <tr>
-                <td>{{ $reservation->name }}</td>
+                <td>{{ $reservation->email }}</td>
+                <td>{{ $reservation->persons }}</td>
                 <td>{{ $reservation->total_price }}</td>
                 <td class="table-actions">
                     <form action="/dashboard/reservations/view/{{ $reservation->id }}" method="get">
