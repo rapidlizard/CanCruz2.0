@@ -5,8 +5,9 @@
     <h1>Edit the reservation.</h1>
 </header>
 <main>
-    <form action="/reservations/create" method="post">
+    <form action="/reservations/{{ $reservation->id }}" method="post">
         @csrf
+        @method('patch')
         <div class="form-group">
             <label class="form-label">Name</label>
             <input class="form-control" type="text" name="name" autocomplete="off" value="{{ $reservation->name }}">
