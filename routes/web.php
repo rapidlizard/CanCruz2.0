@@ -23,6 +23,7 @@ Route::middleware('auth')->group(function () {
             Route::get('/', [App\Http\Controllers\DashboardController::class, 'reservations']);
             Route::get('/create', [App\Http\Controllers\DashboardController::class, 'createReservation']);
             Route::get('/edit/{reservation}', [App\Http\Controllers\DashboardController::class, 'editReservation']);
+            Route::get('/view/{reservation}', [App\Http\Controllers\DashboardController::class, 'viewReservation']);
         });
     });
 });

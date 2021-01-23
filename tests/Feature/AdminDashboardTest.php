@@ -70,4 +70,18 @@ class AdminDashboardTest extends TestCase
             'reservation' => $reservation 
         ]);
     }
+
+    public function test_admin_access_reservation_view()
+    {
+        $user = User::factory()->admin()->create();
+        $reservation = Reservation::factory()->create();
+
+        $response = $this->actingAs($user)->get('/dashboard/reservations/view/' . $reservation->id);
+
+        $response->assertStatus(200);
+        $response->assertViewIs('dashboard.reservation.view');
+        $response->assertViewHasAll([
+            'reservation' => $reservation 
+        ]);
+    }
 }

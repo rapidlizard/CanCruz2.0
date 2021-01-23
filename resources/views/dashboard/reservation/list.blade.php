@@ -20,8 +20,8 @@
                 <td>{{ $reservation->name }}</td>
                 <td>{{ $reservation->total_price }}</td>
                 <td class="table-actions">
-                    <form action="/">
-                        <button class="btn">
+                    <form action="/dashboard/reservations/view/{{ $reservation->id }}" method="get">
+                        <button type="submit" class="btn">
                             <i class="bi bi-eye text-primary" style="font-size: 20px"></i>
                         </button>
                     </form>

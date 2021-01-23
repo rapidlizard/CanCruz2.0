@@ -26,4 +26,9 @@ class DashboardController extends Controller
     {
         return view('dashboard.reservation.edit', ['reservation' => $reservation]);
     }
+
+    public function viewReservation(Reservation $reservation)
+    {
+        return view('dashboard.reservation.view', ['reservation' => $reservation]);
+    }
 }
