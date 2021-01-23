@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 use App\Models\User;
+use App\Models\Reservation;
 
 class AdminDashboardTest extends TestCase
 {
@@ -54,5 +55,19 @@ class AdminDashboardTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertViewIs('dashboard.reservation.create');
+    }
+
+    public function test_admin_access_reservation_edit()
+    {
+        $user = User::factory()->admin()->create();
+        $reservation = Reservation::factory()->create();
+
+        $response = $this->actingAs($user)->get('/dashboard/reservations/edit/' . $reservation->id);
+
+        $response->assertStatus(200);
+        $response->assertViewIs('dashboard.reservation.edit');
+        $response->assertViewHasAll([
+            'reservation' => $reservation 
+        ]);
     }
 }
