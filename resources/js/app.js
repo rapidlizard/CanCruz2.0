@@ -30,11 +30,11 @@ const app = new Vue({
 });
 
 
-if(document.getElementById("back")){
-    const backButton = document.getElementById("back");
+// if(document.getElementById("back")){
+//     const backButton = document.getElementById("back");
 
-    backButton.addEventListener('click', () => {
-        event.preventDefault()
-        window.history.back()
-    })
-}
+//     backButton.addEventListener('click', () => {
+//         event.preventDefault()
+//         window.history.back()
+//     })
+// }

@@ -10977,6 +10977,11 @@ table tbody .table-actions form {
   display: inline;
 }
 
+.page-navigations {
+  display: flex;
+  justify-content: center;
+}
+
 form {
   max-width: 500px;
 }

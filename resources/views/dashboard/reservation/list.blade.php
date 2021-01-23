@@ -43,6 +43,10 @@
             @endforeach
         </tbody>
     </table>
-    <a id="back" href>< back</a>
+    <div class="page-navigations">
+        {{ $reservations->links() }}
+    </div>
+
+    <a id="back" href="/dashboard">< back</a>
 </main>
 @endsection

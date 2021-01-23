@@ -18,7 +18,7 @@
         </div>
 
         <div class="d-flex justify-content-between align-items-center">
-            <a id="back" href>< back</a>
+            <a id="back" href="/dashboard/reservations">< back</a>
             <input class="btn btn-primary" type="submit" value="Create">
         </div>
     </form>

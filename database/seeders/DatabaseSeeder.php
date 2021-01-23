@@ -9,6 +9,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         \App\Models\User::factory()->admin()->create();
-        \App\Models\Reservation::factory()->count(10)->create();
+        \App\Models\Reservation::factory()->count(45)->create();
     }
 }

@@ -1866,15 +1866,13 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js"
 
 var app = new Vue({
   el: '#app'
-});
-
-if (document.getElementById("back")) {
-  var backButton = document.getElementById("back");
-  backButton.addEventListener('click', function () {
-    event.preventDefault();
-    window.history.back();
-  });
-}
+}); // if(document.getElementById("back")){
+//     const backButton = document.getElementById("back");
+//     backButton.addEventListener('click', () => {
+//         event.preventDefault()
+//         window.history.back()
+//     })
+// }
 
 /***/ }),
 
