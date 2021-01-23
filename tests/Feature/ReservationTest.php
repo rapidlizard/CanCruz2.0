@@ -22,4 +22,20 @@ class ReservationTest extends TestCase
             'total_price' => $reservation->total_price
         ]);
     }
+
+    public function test_delete_reservation()
+    {
+        $reservation = Reservation::factory()->create();
+
+        $this->assertDatabaseHas('reservations', [
+            'id' => $reservation->id
+        ]);
+
+        $response = $this->delete('/reservations/' . $reservation->id);
+
+        $response->assertStatus(302);
+        $this->assertDatabaseMissing('reservations', [
+            'id' => $reservation->id
+        ]);
+    }
 }

@@ -12,6 +12,7 @@ Auth::routes([
 
 Route::prefix('reservations')->group(function () {
     Route::post('/create', [App\Http\Controllers\ReservationController::class, 'store']);
+    Route::delete('/{reservation}', [App\Http\Controllers\ReservationController::class, 'delete']);
 });
 
 Route::middleware('auth')->group(function () {

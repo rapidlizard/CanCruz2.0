@@ -20,15 +20,23 @@
                 <td>{{ $reservation->name }}</td>
                 <td>{{ $reservation->total_price }}</td>
                 <td class="table-actions">
-                    <button class="btn">
-                        <i class="bi bi-eye text-primary" style="font-size: 20px"></i>
-                    </button>
-                    <button class="btn">
-                        <i class="bi bi-pencil text-success" style="font-size: 20px"></i>
-                    </button>
-                    <button class="btn">
-                        <i class="bi bi-trash text-danger" style="font-size: 20px"></i>
-                    </button>
+                    <form action="/">
+                        <button class="btn">
+                            <i class="bi bi-eye text-primary" style="font-size: 20px"></i>
+                        </button>
+                    </form>
+                    <form action="">
+                        <button class="btn">
+                            <i class="bi bi-pencil text-success" style="font-size: 20px"></i>
+                        </button>
+                    </form>
+                    <form action="/reservations/{{$reservation->id}}" method="post">
+                        @csrf
+                        @method('delete')
+                        <button type="submit" class="btn">
+                            <i class="bi bi-trash text-danger" style="font-size: 20px"></i>
+                        </button>
+                    </form>
                 </td>
             </tr>
             @endforeach

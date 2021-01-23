@@ -10966,6 +10966,10 @@ table tbody .table-actions {
   text-align: end;
 }
 
+table tbody .table-actions form {
+  display: inline;
+}
+
 form {
   max-width: 500px;
 }

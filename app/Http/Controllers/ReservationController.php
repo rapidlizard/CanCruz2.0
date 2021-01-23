@@ -16,4 +16,11 @@ class ReservationController extends Controller
 
         return redirect('/dashboard/reservations');
     }
+
+    public function delete(Reservation $reservation)
+    {
+        $reservation->delete();
+
+        return redirect('/dashboard/reservations');
+    }
 }
