@@ -10917,6 +10917,7 @@ a.text-dark:focus {
   padding: 10px;
   border-radius: 10px;
   background-color: lightgrey;
+  transition: 0.2s;
 }
 
 .categories .category span {
@@ -10925,6 +10926,12 @@ a.text-dark:focus {
   right: 18px;
   font-size: 26px;
   color: black;
+}
+
+.categories .category:hover {
+  height: 185px;
+  width: 310px;
+  background-color: #b4b4b4;
 }
 
 .dashboard-header {

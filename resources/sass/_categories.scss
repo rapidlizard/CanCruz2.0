@@ -14,6 +14,8 @@
         border-radius: 10px;
         background-color: lightgrey;
 
+        transition: 0.2s;
+
         span {
             position: absolute;
             bottom: 10px;
@@ -21,6 +23,13 @@
 
             font-size: 26px;
             color: black;
+        }
+
+        &:hover {
+            height: 185px;
+            width: 310px;
+
+            background-color: rgb(180, 180, 180);
         }
     }
 }
