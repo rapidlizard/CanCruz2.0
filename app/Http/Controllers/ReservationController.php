@@ -14,6 +14,6 @@ class ReservationController extends Controller
             'total_price' => $request->total_price
         ]);
 
-        return $reservation;
+        return redirect('/dashboard/reservations');
     }
 }

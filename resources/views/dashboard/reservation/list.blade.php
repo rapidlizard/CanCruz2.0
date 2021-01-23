@@ -11,6 +11,7 @@
             <tr>
                 <th>Name</th>
                 <th>Price</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -18,6 +19,17 @@
             <tr>
                 <td>{{ $reservation->name }}</td>
                 <td>{{ $reservation->total_price }}</td>
+                <td class="table-actions">
+                    <button class="btn">
+                        <i class="bi bi-eye text-primary" style="font-size: 20px"></i>
+                    </button>
+                    <button class="btn">
+                        <i class="bi bi-pencil text-success" style="font-size: 20px"></i>
+                    </button>
+                    <button class="btn">
+                        <i class="bi bi-trash text-danger" style="font-size: 20px"></i>
+                    </button>
+                </td>
             </tr>
             @endforeach
         </tbody>

@@ -10962,6 +10962,10 @@ table tbody td {
   padding: 5px 10px;
 }
 
+table tbody .table-actions {
+  text-align: end;
+}
+
 form {
   max-width: 500px;
 }

@@ -16,7 +16,7 @@ class ReservationTest extends TestCase
 
         $response = $this->post('/reservations/create', ['name' => $reservation->name, 'total_price' => $reservation->total_price]);
 
-        $response->assertStatus(201);
+        $response->assertStatus(302);
         $this->assertDatabaseHas('reservations', [
             'name' => $reservation->name,
             'total_price' => $reservation->total_price
