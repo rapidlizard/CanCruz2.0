@@ -17,6 +17,11 @@ class DashboardController extends Controller
         return view('dashboard.reservation.list', ['reservations' => Reservation::all()]);
     }
 
+    public function createReservation()
+    {
+        return view('dashboard.reservation.create');
+    }
+
     public function editReservation(Reservation $reservation)
     {
         return view('dashboard.reservation.edit', ['reservation' => $reservation]);
